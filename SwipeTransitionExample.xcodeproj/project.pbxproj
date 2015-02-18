@@ -13,6 +13,8 @@
 		527B72A41A93A03A00449D35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527B72A31A93A03A00449D35 /* Images.xcassets */; };
 		527B72A71A93A03A00449D35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527B72A51A93A03A00449D35 /* LaunchScreen.xib */; };
 		527B72B31A93A03B00449D35 /* SwipeTransitionExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B72B21A93A03B00449D35 /* SwipeTransitionExampleTests.swift */; };
+		527B72BD1A93A29B00449D35 /* SwipeTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B72BC1A93A29B00449D35 /* SwipeTransitionAnimator.swift */; };
+		527B72BF1A93A38F00449D35 /* SwipeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B72BE1A93A38F00449D35 /* SwipeTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		527B72AC1A93A03B00449D35 /* SwipeTransitionExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeTransitionExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		527B72B11A93A03B00449D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		527B72B21A93A03B00449D35 /* SwipeTransitionExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTransitionExampleTests.swift; sourceTree = "<group>"; };
+		527B72BC1A93A29B00449D35 /* SwipeTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionAnimator.swift; sourceTree = "<group>"; };
+		527B72BE1A93A38F00449D35 /* SwipeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		527B72991A93A03A00449D35 /* SwipeTransitionExample */ = {
 			isa = PBXGroup;
 			children = (
+				527B72BE1A93A38F00449D35 /* SwipeTransition.swift */,
+				527B72BC1A93A29B00449D35 /* SwipeTransitionAnimator.swift */,
 				527B729C1A93A03A00449D35 /* AppDelegate.swift */,
 				527B729E1A93A03A00449D35 /* ViewController.swift */,
 				527B72A01A93A03A00449D35 /* Main.storyboard */,
@@ -213,7 +219,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				527B729F1A93A03A00449D35 /* ViewController.swift in Sources */,
+				527B72BD1A93A29B00449D35 /* SwipeTransitionAnimator.swift in Sources */,
 				527B729D1A93A03A00449D35 /* AppDelegate.swift in Sources */,
+				527B72BF1A93A38F00449D35 /* SwipeTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
