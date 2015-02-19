@@ -10,44 +10,42 @@ import UIKit
 
 public class SwipeTransition: UIPercentDrivenInteractiveTransition {
     public var interacting = false
-    private var presentingVC: UIViewController?
+    
     private var shouldComplete = false
+    private var navigationController: UINavigationController?
+    private var gestureRecognizer: UIPanGestureRecognizer!
     
-    override public var completionSpeed: CGFloat {
-        get {
-            return 1 - percentComplete
-        }
-        set {
-            
-        }
-    }
+    // MARK
     
-    func wireTo(viewController: UIViewController) {
-        presentingVC = viewController
+    public func intergate(viewController: UINavigationController) {
+        navigationController = viewController
         prepareGestureRecognizer(viewController.view)
         
     }
     
-    func prepareGestureRecognizer(view: UIView) {
-        let gesture = UIPanGestureRecognizer(target: self, action: "handlePan:")
-        view.addGestureRecognizer(gesture)
+    // MARK
+    
+    private func prepareGestureRecognizer(view: UIView) {
+        gestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
+        gestureRecognizer.delegate = self
+        if !contains(view.gestureRecognizers as! [UIGestureRecognizer], gestureRecognizer) {
+            view.addGestureRecognizer(gestureRecognizer)
+        }
     }
     
-    func handlePan(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
+    public func handlePan(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
         let translation = gestureRecognizer.translationInView(gestureRecognizer.view!)
         switch gestureRecognizer.state {
         case .Began:
             interacting = true
-            if let navigationController = presentingVC as? UINavigationController {
-                navigationController.popViewControllerAnimated(true)
-                completionCurve = .EaseOut
-            }
+            navigationController?.popViewControllerAnimated(true)
+            completionCurve = .EaseOut
             
         case .Changed:
-            let fraction = min(max(translation.x / 400, 0), 1)
-            shouldComplete = fraction > 0.5
+            let screenWidth = UIScreen.mainScreen().bounds.width
+            let fraction = min(max(translation.x / screenWidth, 0), 1)
+            shouldComplete = fraction > 0.2
             updateInteractiveTransition(fraction)
-            println(fraction)
             
         case .Ended, .Cancelled:
             interacting = false
@@ -60,5 +58,11 @@ public class SwipeTransition: UIPercentDrivenInteractiveTransition {
         default:
             break
         }
+    }
+}
+
+extension SwipeTransition: UIGestureRecognizerDelegate {
+    public func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return navigationController?.viewControllers.count > 1
     }
 }

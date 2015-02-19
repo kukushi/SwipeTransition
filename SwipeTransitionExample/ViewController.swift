@@ -10,37 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var transition = SwipeTransition()
+    var transitionDelegate = SwipeTransitionDeleagte()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        navigationController?.delegate = self
-        transition.wireTo(navigationController!)
+        navigationController?.delegate = transitionDelegate
         navigationController?.interactivePopGestureRecognizer.enabled = false
-        hidesBottomBarWhenPushed = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-}
-
-extension ViewController: UINavigationControllerDelegate {
-    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        switch operation {
-        case .Push:
-//            transition.wireTo(navigationController)
-            return nil
-        default:
-            return SwipeTransitionAnimator()
-        }
-    }
     
-    func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return transition.interacting ? transition : nil
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PushYo" {
+           let viewController =  segue.destinationViewController as! UIViewController
+            
+                viewController.hidesBottomBarWhenPushed = true
+        }
     }
 }
 

@@ -15,6 +15,7 @@
 		527B72B31A93A03B00449D35 /* SwipeTransitionExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B72B21A93A03B00449D35 /* SwipeTransitionExampleTests.swift */; };
 		527B72BD1A93A29B00449D35 /* SwipeTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B72BC1A93A29B00449D35 /* SwipeTransitionAnimator.swift */; };
 		527B72BF1A93A38F00449D35 /* SwipeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B72BE1A93A38F00449D35 /* SwipeTransition.swift */; };
+		52A99B781A96225E00EE0B02 /* SwipeTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A99B771A96225E00EE0B02 /* SwipeTransitionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		527B72B21A93A03B00449D35 /* SwipeTransitionExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTransitionExampleTests.swift; sourceTree = "<group>"; };
 		527B72BC1A93A29B00449D35 /* SwipeTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionAnimator.swift; sourceTree = "<group>"; };
 		527B72BE1A93A38F00449D35 /* SwipeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransition.swift; sourceTree = "<group>"; };
+		52A99B771A96225E00EE0B02 /* SwipeTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		527B72991A93A03A00449D35 /* SwipeTransitionExample */ = {
 			isa = PBXGroup;
 			children = (
+				52A99B771A96225E00EE0B02 /* SwipeTransitionDelegate.swift */,
 				527B72BE1A93A38F00449D35 /* SwipeTransition.swift */,
 				527B72BC1A93A29B00449D35 /* SwipeTransitionAnimator.swift */,
 				527B729C1A93A03A00449D35 /* AppDelegate.swift */,
@@ -167,6 +170,7 @@
 				TargetAttributes = {
 					527B72961A93A03A00449D35 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = VS34895XT6;
 					};
 					527B72AB1A93A03B00449D35 = {
 						CreatedOnToolsVersion = 6.3;
@@ -222,6 +226,7 @@
 				527B72BD1A93A29B00449D35 /* SwipeTransitionAnimator.swift in Sources */,
 				527B729D1A93A03A00449D35 /* AppDelegate.swift in Sources */,
 				527B72BF1A93A38F00449D35 /* SwipeTransition.swift in Sources */,
+				52A99B781A96225E00EE0B02 /* SwipeTransitionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +351,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SwipeTransitionExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -356,7 +363,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SwipeTransitionExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -415,6 +424,7 @@
 				527B72B81A93A03B00449D35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		527B72B91A93A03B00449D35 /* Build configuration list for PBXNativeTarget "SwipeTransitionExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +433,7 @@
 				527B72BB1A93A03B00449D35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
