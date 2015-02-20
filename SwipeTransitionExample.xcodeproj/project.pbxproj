@@ -13,9 +13,9 @@
 		527B72A41A93A03A00449D35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527B72A31A93A03A00449D35 /* Images.xcassets */; };
 		527B72A71A93A03A00449D35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527B72A51A93A03A00449D35 /* LaunchScreen.xib */; };
 		527B72B31A93A03B00449D35 /* SwipeTransitionExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B72B21A93A03B00449D35 /* SwipeTransitionExampleTests.swift */; };
-		527B72BD1A93A29B00449D35 /* SwipeTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B72BC1A93A29B00449D35 /* SwipeTransitionAnimator.swift */; };
-		527B72BF1A93A38F00449D35 /* SwipeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B72BE1A93A38F00449D35 /* SwipeTransition.swift */; };
-		52A99B781A96225E00EE0B02 /* SwipeTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A99B771A96225E00EE0B02 /* SwipeTransitionDelegate.swift */; };
+		52F44D191A975CB700D1F714 /* SwipeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F44D161A975CB700D1F714 /* SwipeTransition.swift */; };
+		52F44D1A1A975CB700D1F714 /* SwipeTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F44D171A975CB700D1F714 /* SwipeTransitionAnimator.swift */; };
+		52F44D1B1A975CB700D1F714 /* SwipeTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F44D181A975CB700D1F714 /* SwipeTransitionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +39,9 @@
 		527B72AC1A93A03B00449D35 /* SwipeTransitionExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeTransitionExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		527B72B11A93A03B00449D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		527B72B21A93A03B00449D35 /* SwipeTransitionExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTransitionExampleTests.swift; sourceTree = "<group>"; };
-		527B72BC1A93A29B00449D35 /* SwipeTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionAnimator.swift; sourceTree = "<group>"; };
-		527B72BE1A93A38F00449D35 /* SwipeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransition.swift; sourceTree = "<group>"; };
-		52A99B771A96225E00EE0B02 /* SwipeTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionDelegate.swift; sourceTree = "<group>"; };
+		52F44D161A975CB700D1F714 /* SwipeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeTransition.swift; path = Source/SwipeTransition.swift; sourceTree = SOURCE_ROOT; };
+		52F44D171A975CB700D1F714 /* SwipeTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeTransitionAnimator.swift; path = Source/SwipeTransitionAnimator.swift; sourceTree = SOURCE_ROOT; };
+		52F44D181A975CB700D1F714 /* SwipeTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeTransitionDelegate.swift; path = Source/SwipeTransitionDelegate.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +83,7 @@
 		527B72991A93A03A00449D35 /* SwipeTransitionExample */ = {
 			isa = PBXGroup;
 			children = (
-				52A99B771A96225E00EE0B02 /* SwipeTransitionDelegate.swift */,
-				527B72BE1A93A38F00449D35 /* SwipeTransition.swift */,
-				527B72BC1A93A29B00449D35 /* SwipeTransitionAnimator.swift */,
+				52F44D151A975C9E00D1F714 /* Source */,
 				527B729C1A93A03A00449D35 /* AppDelegate.swift */,
 				527B729E1A93A03A00449D35 /* ViewController.swift */,
 				527B72A01A93A03A00449D35 /* Main.storyboard */,
@@ -119,6 +117,16 @@
 				527B72B11A93A03B00449D35 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52F44D151A975C9E00D1F714 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				52F44D161A975CB700D1F714 /* SwipeTransition.swift */,
+				52F44D171A975CB700D1F714 /* SwipeTransitionAnimator.swift */,
+				52F44D181A975CB700D1F714 /* SwipeTransitionDelegate.swift */,
+			);
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,10 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				527B729F1A93A03A00449D35 /* ViewController.swift in Sources */,
-				527B72BD1A93A29B00449D35 /* SwipeTransitionAnimator.swift in Sources */,
+				52F44D191A975CB700D1F714 /* SwipeTransition.swift in Sources */,
+				52F44D1A1A975CB700D1F714 /* SwipeTransitionAnimator.swift in Sources */,
 				527B729D1A93A03A00449D35 /* AppDelegate.swift in Sources */,
-				527B72BF1A93A38F00449D35 /* SwipeTransition.swift in Sources */,
-				52A99B781A96225E00EE0B02 /* SwipeTransitionDelegate.swift in Sources */,
+				52F44D1B1A975CB700D1F714 /* SwipeTransitionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
