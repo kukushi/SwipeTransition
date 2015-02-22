@@ -25,3 +25,9 @@ Drag the source file into your project.
 ## Todo
 
 * Carthage & Cocoapods support (after Xcode 6.3 release).
+
+## License
+
+This code is distributed under the terms and conditions of the MIT license.
+
+
